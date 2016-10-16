@@ -1,2 +1,2 @@
-# SpechtLIte.Config
-##具体规则项参考自**[逗bi极客](http://www.yeshigeek.com/forum.php)**
+# Rule template for [SpechtLite](https://github.com/zhuhaow/SpechtLite)
+##Copy from **[逗bi极客](http://www.yeshigeek.com/forum.php)**

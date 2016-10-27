@@ -7,12 +7,12 @@ adapter:
      # There is a 'direct' adapter that connect directly to target host without proxy.
   - id: adapter3
     type: ss
-    host: your host
+    host: 104.224.161.107
     port: 443
     # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
     # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
     method: AES-256-CFB
-    password: your password
+    password: ZWQ4ZWEyYT
   # Speed adapter automatically connects to all specified adapters (with given delay)
   # and uses the fastest one that becomes ready.
   - id: proxy
@@ -70,12 +70,27 @@ rule:
     adapter: direct
   - type: country
   # When the location is unknown. Usually this means this is resolved an Intranet IP.
-    country: --
+    country: US
     match: true
-    adapter: direct
+    adapter: proxy
+  - type: country
+  # When the location is unknown. Usually this means this is resolved an Intranet IP.
+    country: UK
+    match: true
+    adapter: proxy
+  - type: country
+  # When the location is unknown. Usually this means this is resolved an Intranet IP.
+    country: HK
+    match: true
+    adapter: proxy
+  - type: country
+  # When the location is unknown. Usually this means this is resolved an Intranet IP.
+    country: JP
+    match: true
+    adapter: proxy
   - type: DNSFail
   # When the DNS lookup of the host fails.
     adapter: proxy
   - type: all
   # Match all other requests.
-    adapter: proxy
+    adapter: direct
